@@ -57,9 +57,8 @@ public class Vkcup2012B {
         map.put(1,map.getOrDefault(1,0) - group21);
         map.put(2, map.getOrDefault(2,0)-group21);
 
-        for (Map.Entry<Integer, Integer> e: map.entrySet()) {
+        for (Map.Entry<Integer, Integer> e: map.entrySet())
             ans +=e.getValue();
-        }
 
         System.out.println(ans);
     }
