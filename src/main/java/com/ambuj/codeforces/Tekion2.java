@@ -8,7 +8,7 @@ public class Tekion2 {
     static int maxSum(int[] arr) {
         int pIncl = arr[0];
         int pExcl = 0;
-        for (int i=0;i<arr.length;i++) {
+        for (int i=1;i<arr.length;i++) {
             int inclI = pExcl+arr[i];
             int exclI = pIncl;
             pIncl = Math.max(pIncl,inclI);
