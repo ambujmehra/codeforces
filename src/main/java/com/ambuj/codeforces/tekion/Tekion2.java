@@ -1,4 +1,4 @@
-package com.ambuj.codeforces;
+package com.ambuj.codeforces.tekion;
 
 public class Tekion2 {
 
