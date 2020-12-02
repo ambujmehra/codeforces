@@ -1,4 +1,4 @@
-package com.ambuj.codeforces.tekion;
+package com.ambuj.IPLAuction;
 
 //different for each player and each franchine M*N
 public class FranchiseObserver implements IObserver{

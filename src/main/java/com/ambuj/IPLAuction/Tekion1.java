@@ -1,4 +1,4 @@
-package com.ambuj.codeforces.tekion;
+package com.ambuj.IPLAuction;
 
 import java.util.ArrayList;
 import java.util.Arrays;

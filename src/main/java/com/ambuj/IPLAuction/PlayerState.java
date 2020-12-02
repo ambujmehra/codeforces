@@ -1,4 +1,4 @@
-package com.ambuj.codeforces.tekion;
+package com.ambuj.IPLAuction;
 
 public enum PlayerState {
 
