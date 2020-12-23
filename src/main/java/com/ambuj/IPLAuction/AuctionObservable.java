@@ -1,46 +1,23 @@
 package com.ambuj.IPLAuction;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
+@Setter
 public class AuctionObservable implements IObservable {
 
     private Player player;
-
     private List<IObserver> observers;
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
-    public List<IObserver> getObservers() {
-        return observers;
-    }
-
-    public void setObservers(List<IObserver> observers) {
-        this.observers = observers;
-    }
-
-    public AuctionHelper getAuctionHelper() {
-        return auctionHelper;
-    }
-
-    public void setAuctionHelper(AuctionHelper auctionHelper) {
-        this.auctionHelper = auctionHelper;
-    }
-
-    // TODO:: can be a strategy
     private AuctionHelper auctionHelper;
 
     @Override
     public void add(IObserver observer) {
         observers.add(observer);
-
     }
 
     @Override
@@ -63,11 +40,4 @@ public class AuctionObservable implements IObservable {
         this.notifyFranchise();
     }
 
-    public PlayerState getPlayerState() {
-        return this.player.getPlayerState();
-    }
-
-    public void setPlayerState(PlayerState playerState) {
-        this.setPlayerState(playerState);
-    }
 }

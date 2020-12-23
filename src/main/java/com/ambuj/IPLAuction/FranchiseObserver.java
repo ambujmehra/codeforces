@@ -1,6 +1,11 @@
 package com.ambuj.IPLAuction;
 
+import lombok.Getter;
+import lombok.Setter;
+
 //different for each player and each franchine M*N
+@Getter
+@Setter
 public class FranchiseObserver implements IObserver{
 
     private Franchise franchise;
@@ -11,9 +16,8 @@ public class FranchiseObserver implements IObserver{
     public void notifyMe(Player player, PlayerState playerState) {
         if(playerState.equals(PlayerState.SOLD)) {
             franchise.getMyPlayers().add(player);
-            franchise.getBudget().subtract(bidDto.getBid());
+            franchise.setBudget(franchise.getBudget().subtract(bidDto.getBid()));
         }
-
     }
 
     @Override
@@ -21,19 +25,4 @@ public class FranchiseObserver implements IObserver{
         return this.bidDto;
     }
 
-    public Franchise getFranchise() {
-        return franchise;
-    }
-
-    public void setFranchise(Franchise franchise) {
-        this.franchise = franchise;
-    }
-
-    public BidDto getBidDto() {
-        return bidDto;
-    }
-
-    public void setBidDto(BidDto bidDto) {
-        this.bidDto = bidDto;
-    }
 }

@@ -11,9 +11,9 @@ public class AuctionDriver {
         AuctionHelper auctionHelper = new AuctionHelper();
         PlayerStats playerStats = new PlayerStats();
         playerStats.basePrice = new BigDecimal(1000000);
-        Player dhoni = new Player("dhoni", playerStats, PlayerState.PENDING );
-        Player kohli = new Player("kohli", playerStats, PlayerState.PENDING );
-        Player rohit = new Player("rohit", playerStats, PlayerState.PENDING );
+        Player dhoni = new Player("dhoni", playerStats, PlayerState.PENDING,100 );
+        Player kohli = new Player("kohli", playerStats, PlayerState.PENDING, 100 );
+        Player rohit = new Player("rohit", playerStats, PlayerState.PENDING, 100 );
 
         Franchise mi = new Franchise("MI", new BigDecimal(100000000), new ArrayList<>());
         Franchise csk = new Franchise("CSK", new BigDecimal(100000000), new ArrayList<>());
